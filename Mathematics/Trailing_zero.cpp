@@ -22,13 +22,13 @@ int countZero(int n){
 
    int countTrailingZeros(int n){
     int res = 0;
-    for(int i = 5; i<=5; i=i*5){
+    for(int i = 5; i<=n; i=i*5){
         res = res + (n/i);
     }
     return res;
    }
 
 int main(){
-    int n = 98;
+    int n = 25 ;
     cout << countTrailingZeros(n);
 }

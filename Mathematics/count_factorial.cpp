@@ -1,17 +1,11 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 int factorial(int n){
-    int fact = 1;
-    for(int i =1; i<=n; i++){
-      fact = fact*i;
-    }
-        int res = 0;
-    while(fact!= 0){
-        fact = fact/10;
-        res++;
-    }
-    return res;
-
+double res = 0;
+for(int i = 1; i<=n; i++){
+    res = res + log10(i);
+}
+return (floor(res)+1);
 }
 int main(){
     int n = 5;
