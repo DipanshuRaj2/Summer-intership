@@ -1,22 +1,28 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
-int primeFactors(int n){
-    for(int i = 2; i<n; i++){
-    
-        if(isPrime(i)){
+void printFactors(int n){
+    if(n<=1)
+        return;
 
-            int x = i;
+    for(int i = 2; i*i<=n; i++){
+        
+        while(n % i == 0){
 
-            while(n%x == 0){
+            cout << i <<" ";
 
-                cout << i;
-
-                x = x*i;
-            }
+            n = n/i;
         }
     }
+    if(n > 1)
+        cout << n;
+
+    
 }
 int main(){
-    int n = 15;
-    cout<<primeFactors(n);
+
+    int n = 5478 ;
+
+    printFactors(n);
+
+    return 0;
 }

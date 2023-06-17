@@ -43,22 +43,55 @@
 // }
 
 //HCF and LCM
-#include<iostream>
-using namespace std;
-int LCF(int a ,int b){
-    int res = max(a,b);
-    while(true){
-        if((res%a==0) && (res%b==0)){
-            break ;
-        }
-        res++;
+// #include<iostream>
+// using namespace std;
+// int LCF(int a ,int b){
+//     int res = max(a,b);
+//     while(true){
+//         if((res%a==0) && (res%b==0)){
+//             break ;
+//         }
+//         res++;
         
-    }
-    return res;
-}
-int main(){
-    int n , m;
-    cin >>n>>m;
-    cout<<"LCF of "<<n <<", "<< m<<" :- "<<LCF(n , m);
+//     }
+//     return res;
+// }
+// int main(){
+//     int n , m;
+//     cin >>n>>m;
+//     cout<<"LCF of "<<n <<", "<< m<<" :- "<<LCF(n , m);
 
+// }
+#include <iostream>
+#include <limits.h>
+using namespace std;
+
+ void printPrimeFactors(int n)
+{
+	if(n <= 1)
+		return;
+
+	for(int i=2; i*i<=n; i++)
+	{
+		while(n % i == 0)
+		{
+			cout<<i<<" ";
+
+			n = n / i;
+		}
+	}
+
+	if(n > 1)
+		cout<<n<<" ";
+
+	cout<<endl;
+}
+
+int main() {
+    
+    	int n = 450;
+    	
+    	printPrimeFactors(n);
+    	
+    	return 0;
 }
