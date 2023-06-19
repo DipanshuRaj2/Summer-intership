@@ -62,36 +62,36 @@
 //     cout<<"LCF of "<<n <<", "<< m<<" :- "<<LCF(n , m);
 
 // }
-#include <iostream>
-#include <limits.h>
-using namespace std;
+// #include <iostream>
+// #include <limits.h>
+// using namespace std;
 
- void printPrimeFactors(int n)
-{
-	if(n <= 1)
-		return;
+//  void printPrimeFactors(int n)
+// {
+// 	if(n <= 1)
+// 		return;
 
-	for(int i=2; i*i<=n; i++)
-	{
-		while(n % i == 0)
-		{
-			cout<<i<<" ";
+// 	for(int i=2; i*i<=n; i++)
+// 	{
+// 		while(n % i == 0)
+// 		{
+// 			cout<<i<<" ";
 
-			n = n / i;
-		}
-	}
+// 			n = n / i;
+// 		}
+// 	}
 
-	if(n > 1)
-		cout<<n<<" ";
+// 	if(n > 1)
+// 		cout<<n<<" ";
 
-	cout<<endl;
-}
+// 	cout<<endl;
+// }
 
-int main() {
+// int main() {
     
-    	int n = 450;
+//     	int n = 450;
     	
-    	printPrimeFactors(n);
+//     	printPrimeFactors(n);
     	
-    	return 0;
-}
+//     	return 0;
+// }
