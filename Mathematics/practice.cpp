@@ -93,5 +93,77 @@
     	
 //     	printPrimeFactors(n);
     	
-//     	return 0;
+// //     	return 0;
+// // }
+#include<bits/stdc++.h>
+using namespace std;
+// int fun(int arr[] , int n) {
+//     int x = arr[0];
+
+//     for(int i =1; i<n; i++)
+
+//         x = x^arr[i];
+
+//     return x;
 // }
+// int main(){
+//     int arr[20] = {9,12,2,11,2,2,10,9,12,10,11,2};
+
+//     cout <<fun(arr[20]);
+// }
+// int main(){
+//     int a = 2 , b= 3 ;
+//     int c= (a^b);
+
+//     cout << c;
+
+// }
+// #include<iostream>
+// using namespace std;
+// int fact(int n){
+//     int res = 1;
+
+//     for(int i = 1; i<=n; i++){
+//         res = res * i;
+
+//     }
+//     return res;
+// }
+// int countThefact(int m){
+//     int count = 0;
+//     int factorial = fact(m);
+//       while(factorial>0){
+
+//         factorial = factorial/10;
+//         count ++;
+        
+//       }
+//       return count;
+
+// }
+// int main(){
+//     int n = 123;
+//     cout <<countThefact(n);
+// }
+#include<iostream>
+using namespace std;
+int powerOf2(int n ){
+    int count = 0;
+    if(n == 1){
+        return true;
+    }
+    while(n != 1){
+        
+        
+        if(n % 2 == 1){
+             return false;
+        }
+        n = n /2;
+        count++;
+    }
+    return count;
+}
+int main(){
+    int n = 1024 ;
+    cout <<powerOf2(n);
+}
