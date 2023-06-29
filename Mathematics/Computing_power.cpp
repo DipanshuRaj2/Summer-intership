@@ -12,7 +12,7 @@ int power(int a , int n){
 }
 int main(){
 
-    int a = 4, n = 0;
+    int a = 4, n = 2;
     cout <<power(a , n);
 }
 // doubt

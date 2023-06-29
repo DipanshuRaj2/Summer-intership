@@ -1,33 +1,42 @@
+// #include <bits/stdc++.h>
+
+// using namespace std;
+
+// int reverseNumber(int num) {
+//     int reversedNum = 0;
+//     while (num != 0) {
+//         reversedNum = reversedNum * 10 + num % 10;
+//         num /= 10;
+//     }
+//     return reversedNum;
+// }
+
+// double powerToReverse(int num) {
+//     int reversedNum = reverseNumber(num);
+//     return pow(num, reversedNum);
+// }
+
+// int main() {
+//     int number;
+//     cout << "Enter a number: ";
+//     cin >> number;
+    
+//     double result = powerToReverse(number);
+//     cout << number << " raised to its reverse is: " << result << endl;
+    
+//     return 0;
+// }
 #include<iostream>
 using namespace std;
-bool palindrome(int n){
-    int temp = n;
-    int res = 0;
-    while(temp!=0){
-        int id = temp%10;
-        res = (res *10) + id;
-
-        temp = temp/10;
-    }
-    return (n == res);
-
+int fact(int n){
+ if (n==0) return 0;
+//  if(n==1) return 1;
+ else
+   return fact(n-1)+fact(n-2);
 }
 int main(){
-    int n;
-    cin >> n;
-
-    if(palindrome(n)){
-        cout <<n <<" Palindrome no.";
-
-    }
-    else
-        cout << n <<" not Palindrome";
+    cout<<fact(15);
 }
-
-
-
-
-
 
 
 
