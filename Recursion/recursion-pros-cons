@@ -1,3 +1,10 @@
 Disadvantage of Recursion: Note that both recursive and iterative programs have the same problem-solving powers, i.e., every recursive program can be written iteratively and vice versa. Recursive program has greater space requirements than iterative program as all functions will remain in the stack until the base case is reached. A recursive program also has greater time requirements because of function calls and return overhead.
 
  Advantages of Recursion: Recursion provides a clean and simple way to write code. Some problems are inherently recursive like tree traversals, Tower of Hanoi, etc. For such problems, it is preferred to write recursive code. We can write such codes also iteratively with the help of the stack data structure.
+
+ Tail Recursion : tail recursion is a way of writing recursive functions in a special form that makes them more efficient. It means that the recursive call is the last thing the function does, and it doesn't have any pending calculations or operations after the recursive call.
+ By using tail recursion, we can avoid creating new memory space for each recursive call, which saves memory and allows the program to run faster.
+
+ Which one is Better-tail Recursive or Non Tail-Recursive?
+ 
+ The tail-recursive functions are considered better than non-tail recursive functions as tail-recursion can be optimized by the compiler. The idea used by compilers to optimize tail-recursive functions is simple, since the recursive call is the last statement, there is nothing left to do in the current function, so saving the current function’s stack frame is of no use.
