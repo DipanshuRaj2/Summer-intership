@@ -13,7 +13,7 @@ int main(){
  
     cout << "Enter the size of the array :- ";
    
-    cin >> n;
+    cin >> n;//size of array
 
     int arr[n];
 
