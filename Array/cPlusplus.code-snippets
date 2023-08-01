@@ -1,0 +1,16 @@
+{
+	"cp-extension": {
+		"prefix": [
+			"c-arr"
+		],
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"int main() {",
+			"int n =  ;",
+			"int arr[n] = {}; ",
+			"}"
+		],
+		"description": "Default code for C++ Practice"
+	}
+}
