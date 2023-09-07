@@ -72,40 +72,84 @@
 //         cout << arr[i] <<" ";
     
 // }
+// #include<iostream>
+// using namespace std;
+// int insertion(int arr[], int n, int cap, int x, int pos){
+//   if(n == cap)
+//    return n;
+
+//   int idx = pos -1;
+
+//   for(int i = n-1 ; i >=idx; i--)
+//     arr[i+1] = arr[i];
+
+//   arr[idx] = x;
+
+//   return n+1;
+// }
+//   int main(){
+//     int arr[5], cap = 5, n = 3;
+
+//     arr[0] = 5; arr[1]= 10; arr[2]=20;
+
+//     cout <<"Before Insertion "<< endl;
+
+//     for(int i = 0; i < n; i++)
+//       cout <<arr[i]<<" ";
+
+//     cout << endl;
+    
+//     int x = 7 , pos = 2;
+
+//     n = insertion(arr,n, cap, x, pos);
+
+//     cout <<"After Insertion "<< endl;
+
+//     for(int i = 0; i < n; i++){
+//       cout << arr[i] <<" ";
+//     }
+//   }
+
 #include<iostream>
 using namespace std;
-int insertion(int arr[], int n, int cap, int x, int pos){
+int insertion(int arr[],int n , int pos, int x, int cap){
   if(n == cap)
-   return n;
+    return n;
 
   int idx = pos -1;
+  for(int i = n-1; i >= idx; i--){
 
-  for(int i = n-1 ; i >=idx; i--)
-    arr[i+1] = arr[i];
+    arr[i+1] =arr[i];
 
+  }
   arr[idx] = x;
 
   return n+1;
 }
-  int main(){
-    int arr[5], cap = 5, n = 3;
+int main(){
+  int n , cap , x , pos ;
 
-    arr[0] = 5; arr[1]= 10; arr[2]=20;
+  cout <<"Enter the capacity of array ";
+  cin >> cap;
 
-    cout <<"Before Insertion "<< endl;
+  cout <<"Enter the size of array ";
+  cin >> n;
 
-    for(int i = 0; i < n; i++)
-      cout <<arr[i]<<" ";
+ int arr[cap];
 
-    cout << endl;
-    
-    int x = 7 , pos = 2;
-
-    n = insertion(arr,n, cap, x, pos);
-
-    cout <<"After Insertion "<< endl;
-
-    for(int i = 0; i < n; i++){
-      cout << arr[i] <<" ";
-    }
+  cout <<"Enter the Elements of array ";
+  for(int i = 0; i<n; i++){
+    cin >> arr[i];
   }
+
+  cout <<"Enter the position you want to insert ";
+  cin >> pos;
+
+  cout <<"Enter the Element you want to insert ";
+  cin >> x;
+
+  n= insertion(arr , n, pos, x, cap);
+
+  for(int i = 0; i<n; i++)
+      cout << arr[i] <<" ";
+}
